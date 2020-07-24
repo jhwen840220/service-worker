@@ -22,6 +22,11 @@
                 .then(reg => console.log('SW registered! scope is:', reg.scope))
                 .catch(err => console.log('Error!', err));
         }
+        setTimeout(() => {
+            const img = new Image();
+            img.src = '/dog.svg';
+            document.body.appendChild(img);
+        }, 3000);
     </script>
 </body>
 </html>
