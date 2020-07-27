@@ -12,17 +12,18 @@
     <!-- CODELAB: Add meta theme-color -->
     <meta name="theme-color" content="#2F3BA2" />
     <link rel="stylesheet" type="text/css" href="main.css">
-    <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
-    <div>
-        <img width="100" src="https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/horse.svg"/>
+    
+    <div class="header">測試 header</div>
+    <div class="content">
+        <img width="100" src="horse.svg"/>
         <table>
             <thead>
                 <tr>
-                    <td>name</td>
-                    <td>age</td>
-                    <td>gender</td>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>gender</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,14 +41,7 @@
                 .then(reg => console.log('SW registered! scope is:', reg.scope))
                 .catch(err => console.log('Error!', err));
         }
-
-        fetch('http://localhost:3000/dog')
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById("name").innerHTML = data.name;
-                document.getElementById("age").innerHTML = data.age;
-                document.getElementById("gender").innerHTML = data.gender;
-            });
     </script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
